@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A06-Gelaye</title>
+    <style>
+        body {
+            background-color: tan;
+            color: #white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A06-Gelaye</h1>
+    </header>
+
+    <div id="attention" style="background-color: #800080; color: white;">
+        <h2>Attention - Concentrating and focusing on information which is relavent. This is done by setting clear goals and how you present the information on the interface. </h2>
+        <ul>
+            <li>Make the information you want the user to give the most attention to noticable and bold. </li>
+            <li>Incorporate visual interfaces, different colors, different fonts, different sizes to get your intended effect of focus. </li>
+            <li>Avoid cluttering and too much information as they can be distracting and be counter-productive to what you want to acheive. </li>
+            <li> Design effective and pleasing methods from switching from one interface to another. </li>
+        </ul>
+    </div>
+
+    <div id="perception" style="background-color: green; color: white;">
+        <h2>Perception - How information is acquired via the five senses and transformed into experiences. There is also a sixth sense which is kinesthesia. Perception also loosely relies on other cognitive proccesses such as memory, attention, and language. </h2>
+        <ul>
+            <li>Design icons which are easily distinguishable.</li>
+            <li>Make the divisions of text/images easily notiable and use effective divisions to make groupings look ordered and neat. </li>
+            <li>Design audio sounds to be easily distinguishable</li>
+            <li>Use proper color contrasts when desigining as overlaps in color can lead to things being difficult to see </li>
+            <li>Haptic feedback should be used rarely </li>
+        </ul>
+    </div>
+
+    <div id="memory" style="background-color: blue; color: white;">
+        <h2>Memory - Recalling various kinds of knowledges that allow people to act appropriately and know what to do. Memory is complex and hard to quantify or really understand, but using patterns accross interfaces can help with memorability. </h2>
+        <ul>
+            <li>Make tasks simple and clean to avoid long proccesses with taxing mental loads.</li>
+            <li>Design interfaces using familiar interaction patterns, menus, and icons.</li>
+            <li>Provide users with a variety of ways to label their digital information.</li>
+        </ul>
+    </div>
+
+    <div id="learning" style="background-color: red; color: white;">
+        <h2>Learning - Accumilation of skills and knowledge that would be impossible to achieve without memory. Simply put it is acquiring new information. There are two types of learning, intentional which means on purpose, and incidental which means by chance.</h2>
+        <ul>
+            <li>Design interfaces that encourage exploration.</li>
+            <li>Design interfaces that will guide and force newer users to take a predetermined path to help them learn the interface.</li>
+        </ul>
+    </div>
+
+    <div id="language" style="background-color: pink; color: white;">
+        <h2>Reading, Speaking, and Listening - three forms of language proccessing. Each proccess has specific benefits and flaws.</h2>
+        <ul>
+            <li>Minimize speech-based menus as research has shown a large amount of them can lead to confusion.</li>
+            <li>Use artificially generated voices instead of human as they are easy to understand. </li>
+            <li>Provide the option to enlarge or make text smaller without affecting the formatting.</li>
+        </ul>
+    </div>
+
+    <div id="thinking" style="background-color: black; color: white;">
+        <h2>Problem-Solving, Planning, Reasoning, and Decision-Making - thinking about what to do, how to do it, and what the potential consequences are by taking that course of action. In cases of information overload, the brain can often ignore unneccessary information by looking at important cues.</h2>
+        <ul>
+            <li>Provide information and help to individuals who want to understand more.</li>
+            <li>Use simple and memorable functions to let users make decisions with speed and planning.</li>
+            <li>Let users set or save their own preferences.</li>
+        </ul>
+    </div>
+
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <div style="background-color: orange; color: white;">
+        <h2>Opinion on LIMBIC video:</h2>
+        <p>I think that by itself the idea is rather innovative and offers a lot of comfort. It is good for icebreaks and simply starting up conversations. However, as a technological concept I don't like it very much. Attaching your own personal information to a phone or computer is one thing, but a device that contains information strictly and only about you can lead to an array of problems. However, for this context I do like it. </p>
+    </div>
+
+    <footer>
+        <small>&copy; Created by Fitsum Gelaye - February 19, 2024</small>
+    </footer>
+
+    <script>
+        function changeBackgroundColor() {
+            document.getElementById('attention').style.backgroundColor = '#000';
+            document.getElementById('perception').style.backgroundColor = '#000';
+            document.getElementById('memory').style.backgroundColor = '#000';
+            document.getElementById('learning').style.backgroundColor = '#000';
+            document.getElementById('language').style.backgroundColor = '#000';
+            document.getElementById('thinking').style.backgroundColor = '#000';
+        }
+    </script>
+</body>
+</html>
