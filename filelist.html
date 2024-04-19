@@ -1,53 +1,89 @@
 <!DOCTYPE html>
-<!-- saved from url=(0055)https://jsfiddle.net/thecryptobeserker/zmjxko0p/1/show/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    
-    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JSFiddle</title>
-
-      <meta name="robots" content="index, follow">
-      <meta name="googlebot" content="index, follow">
-
-      <script type="text/javascript">
-        var height
-        var force_height = null
-        var slug = "zmjxko0p"
-        var show_src = "//fiddle.jshell.net/thecryptobeserker/zmjxko0p/1/show/light/"
-        var resize_element_counter = 0
-        var shell_edit_url = "/thecryptobeserker/zmjxko0p/1/light/"
-      </script>
-
-      <script src="./filelist_files/embed.js.download"></script>
-      <link rel="stylesheet" media="screen" href="./filelist_files/embed-light.css">
-      <link rel="icon" href="https://jsfiddle.net/img/favicon.png">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My GitHub Repository Files</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://img-aws.ehowcdn.com/560x560p/s3-us-west-1.amazonaws.com/contentlab.studiod/getty/2953320f061a409a8b57fa9c21e1e3a6");
+        background-position: center;
+        color: #333;
+      }
+      #container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      #files {
+        margin-top: 20px;
+        margin-left: 330px;
+      }
+      #Profile {
+        margin-left: 250px;
+      }
+      .file-link {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
-  <body id="sylvester-standalone">
-    <a class="toEditor" href="https://jsfiddle.net/thecryptobeserker/zmjxko0p/1/" target="_blank">
-      <svg width="34" height="40">
-      <use xlink:href="//jsfiddle.net/sprite.svg#logo"></use>
-    </svg>Edit in JSFiddle
-    </a>
+  <body>
+    <div id="container">
+      <h1>My GitHub Repository Files</h1>
+      <div id="Profile">
+        <img
+          id="PfP"
+          src="https://thecryptobeserker.github.io/SD330/profile.jpg"
+        />
+      </div>
+      <p>
+        Welcome to Fitsum's Repository Files. Below are the files available:
+      </p>
+      <div id="files"></div>
+      <footer>
+        <small> &copy; Fitsum Gelaye April 18, 2024 </small>
+      </footer>
+    </div>
 
-    <div id="result">
-      
-    <iframe src="./filelist_files/saved_resource.html" frameborder="0" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-downloads allow-modals allow-popups" allow="midi; geolocation; microphone; camera; display-capture; encrypted-media;"></iframe></div>
+    <script>
+      function githubFilelist() {
+        var htmlString = "";
 
-    
-<!-- Google tag (gtag.js) -->
-<script async="" src="./filelist_files/js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function analytics_jsf(){dataLayer.push(arguments);}
-  analytics_jsf("js", new Date());
-  analytics_jsf("config", "G-DG76L8EKG3", {
-    page_path:     "/[user]/[fiddle]/[revision]/[embedded]/",
-    cookie_prefix: "jsfiddle",
-    
-  })
-</script>
+        // This creates JS object 'data' with a list of files
+        (async () => {
+          const response = await fetch(
+            "https://api.github.com/repos/thecryptobeserker/SD330/contents/"
+          );
+          const data = await response.json();
 
-  
+          // Loop through the list of files, set "file" to each file name
+          for (let file of data) {
+            var fname = file.name;
+            var fpath = "https://thecryptobeserker.github.io/SD330/" + fname;
 
-</body></html>
+            htmlString +=
+              "<a href='" +
+              fpath +
+              "' class='file-link'><p>" +
+              fname +
+              "</p></a>";
+          }
+
+          document.getElementById("files").innerHTML = htmlString;
+        })();
+      }
+
+      window.onload = githubFilelist;
+    </script>
+  </body>
+</html>
