@@ -1,0 +1,137 @@
+﻿{
+  "parking_lots": [
+    {
+      "name": "Lot A",
+      "map_filename": "mapFoy.jpg",
+      "total_spaces": 50,
+      "comments": "Main parking lot near the entrance",
+      "spaces": [
+        {
+          "space_number": 1,
+          "type": "Faculty/Staff",
+          "availability": "Available",
+          "last_reserved": "2024-04-29 12:30PM",
+          "next_reservation": "2024-04-29 6:25PM"
+        },
+        {
+          "space_number": 2,
+          "type": "Student",
+          "availability": "Filled",
+          "filled_datetime": "2024-04-29 12:30 PM",
+          "reserved_datetime": "2024-04-29 8:00 AM"
+        },
+        {
+          "space_number": 3,
+          "type": "Handicap",
+          "availability": "Reserved",
+          "filled_datetime": "",
+          "reserved_datetime": "2024-04-30 9:00 AM"
+        },
+        {
+          "space_number": 4,
+          "type": "Faculty/Staff",
+          "availability": "Available",
+          "last_reserved": "2024-04-29 12:22PM",
+          "next_reservation": "2024-04-29 4:30 PM"
+        },
+        {
+          "space_number": 5,
+          "type": "Student",
+          "availability": "Available",
+          "last_reserved": "2024-04-29 11:30AM",
+          "next_reservation": "2024-04-29 6:20 PM"
+        },
+        {
+          "space_number": 6,
+          "type": "Handicap",
+          "availability": "Filled",
+          "filled_datetime": "2024-04-29 10:45 AM",
+          "reserved_datetime": ""
+        },
+        {
+          "space_number": 7,
+          "type": "Faculty/Staff",
+          "availability": "Available",
+          "last_reserved": "2024-04-29 1:00 PM",
+          "next_reservation": "2024-04-29 3:21 PM"
+        },
+        {
+          "space_number": 8,
+          "type": "Student",
+          "availability": "Filled",
+          "filled_datetime": "2024-04-29 9:15 AM",
+          "reserved_datetime": ""
+        },
+        {
+          "space_number": 9,
+          "type": "Handicap",
+          "availability": "Available",
+          "last_reserved": "2024-04-29 11:30AM",
+          "next_reservation": "2024-04-29 12:20 PM"
+        },
+        {
+          "space_number": 10,
+          "type": "Faculty/Staff",
+          "availability": "Available",
+          "last_reserved": "2024-04-29 6:30AM",
+          "next_reservation": "2024-04-29 2:20 PM"
+        },
+        {
+          "space_number": 11,
+          "type": "Student",
+          "availability": "Reserved",
+          "filled_datetime": "",
+          "reserved_datetime": "2024-04-29T14:00:00"
+        },
+        {
+          "space_number": 12,
+          "type": "Handicap",
+          "availability": "reserved",
+          "filled_datetime": "",
+          "reserved_datetime": "2024-04-29T14:00:00"
+        }
+        
+      ]
+    },
+        {
+      "name": "Sheahan Lot",
+      "map_filename": "Sheahan.jpg",
+      "total_spaces": 30,
+      "comments": "Close to Residence Halls Sheahan + Leo",
+      "type": "Overground",
+      "accessibility": "Students"
+        },
+         {
+      "name": "Upper Fulton Lot",
+      "map_filename": "UFulton.jpg",
+      "total_spaces": 60,
+      "comments": "Close to Residence Hall Upper Fulton",
+      "type": "Overground",
+      "accessibility": "All"
+        },
+         {
+      "name": "Hancock Lot",
+      "map_filename": "Hancock.jpg",
+      "total_spaces": 25,
+      "comments": "Close to Hancock Center Building",
+      "type": "Overground",
+      "accessibility": "Professors"
+        },
+         {
+      "name": "Lower New Lot",
+      "map_filename": "LNew.jpg",
+      "total_spaces": 40,
+      "comments": "Close to Residence Hall Lower Fulton",
+      "type": "Underground",
+      "accessibility": "Students"
+        },
+         {
+      "name": "McCan Lot",
+      "map_filename": "McCan.jpg",
+      "total_spaces": 100,
+      "comments": "Close to McCan Recreation Center",
+      "type": "Overground",
+      "accessibility": "All"
+        }
+  ]
+}
