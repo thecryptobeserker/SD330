@@ -1,10 +1,10 @@
 ﻿{
   "parking_lots": [
     {
-      "name": "Lot A",
+      "name": "Foy Lot",
       "map_filename": "mapFoy.jpg",
       "total_spaces": 50,
-      "comments": "Main parking lot near the entrance",
+      "comments": "Close to Foy Residence Halls",
       "spaces": [
         {
           "space_number": 1,
