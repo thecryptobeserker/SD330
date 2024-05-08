@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marist Parking - Foy Lot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            background-color: red;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            color: red;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Marist Parking App - Foy Lot</h1>
+        <img src="https://thecryptobeserker.github.io/SD330/marist%20logo.png" alt="Marist Parking Image">
+    </div>
+
+   
+    <div id="foy-lot-info" class="parking-spot">
+        <h2>Foy Lot</h2>
+      
+    </div>
+
+</div>
+
+<script>
+    async function loadParkingData() {
+        try {
+            const response = await fetch("https://thecryptobeserker.github.io/SD330/parking.json");
+            const data = await response.json();
+
+           
+            const foyLotData = data.parking_lots.find(lot => lot.name === "Foy Lot");
+
+          
+            let htmlString = '<h2>' + foyLotData.name + '</h2>';
+            htmlString += '<p>Total Spaces: ' + foyLotData.total_spaces + '</p>';
+            htmlString += '<p>Map Filename: <img src="https://thecryptobeserker.github.io/SD330/mapFoy.jpg' + foyLotData.map_filename + '" alt="' + foyLotData.name + ' Map"></p>';
+            htmlString += '<p>Comments: ' + foyLotData.comments + '</p>';
+          
+
+            htmlString += '<h3>Parking Spaces:</h3>';
+            htmlString += '<div class="parking-spaces">';
+            foyLotData.spaces.forEach(space => {
+                htmlString += '<div class="space">';
+                htmlString += '<p>Space Number: ' + space.space_number + '</p>';
+                htmlString += '<p>Type: ' + space.type + '</p>';
+                htmlString += '<p>Availability: ' + space.availability + '</p>';
+                htmlString += '<p>Last Reserved: ' + space.last_reserved + '</p>';
+                htmlString += '<p>Next Reservation: ' + space.next_reservation + '</p>';
+                htmlString += '</div>';
+            });
+            htmlString += '</div>';
+
+           
+            document.getElementById('foy-lot-info').innerHTML = htmlString;
+        } catch (error) {
+            console.error('Error fetching or parsing JSON data:', error);
+        }
+    }
+
+    window.onload = loadParkingData;
+</script>
+
+</body>
+</html>
